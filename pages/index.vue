@@ -1,5 +1,20 @@
 <template>
-  <v-row justify="center" align="center">
-    <h1>hello</h1>
-  </v-row>
+  <div class="home">
+    <Hero />
+  </div>
 </template>
+
+<script>
+import Hero from "../components/Hero.vue"
+
+export default {
+  name: "home",
+  components: {
+    Hero,
+  }
+}
+</script>
+
+<style>
+
+</style>
