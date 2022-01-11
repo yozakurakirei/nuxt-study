@@ -1,0 +1,22 @@
+// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
+//
+// The variables you want to modify
+// $font-size-root: 20px;
+@import '~vuetify/src/styles/styles.sass';
+
+* {
+  font-family:  "ヒラギノ角ゴ ProN W3", "HiraKakuProN-W3", sans-serif !important;
+}
+
+body {
+  background: #e4e4e4;
+}
+
+// $material-dark: (
+//   'background': #e4e4e4,
+//   'app-bar': #13151a,
+//   'toolbar': #152535,
+//   'navigation-drawer': #141720,
+//   'cards': #152535,
+//   'bg-color': #2c3e4f,
+// );
