@@ -3,8 +3,8 @@
     <img src="../assets/image/iradesign1.png" alt="トップ画像" height="400px" width="1000px">
     <div class="text-container">
       <div class="text">
-        <span class="mini-heading">Now Streaming</span>
-        <h1><span>Now</span>Streaming</h1>
+        <span class="mini-heading">Now Starting!</span>
+        <h1><span>さぁ、</span>開発環境を<br>調べてみよう!</h1>
         <a href="#movie-grid" class="button"></a>
       </div>
     </div>
@@ -41,9 +41,9 @@ export default {
   }
 
   .text-container {
-    // z-index: 10;
+    z-index: 10;
     position: absolute;
-    top: 0;
+    top: 5rem;
     margin: 0;
     width: 100%;
     height: 100%;
@@ -60,15 +60,20 @@ export default {
     .mini-heading {
       font-weight: bold;
       font-size: 1.8rem;
-      color: #fff;
+      color: #444;
       margin-bottom: .8rem;
 
       @media (min-width: 750px) {
         font-size: 2rem;
       }
 
+    }
+    h1 {
+      color: #fefefe;
+
       span {
         font-weight: bold;
+        color: aquamarine;
       }
     }
   }
