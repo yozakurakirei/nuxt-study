@@ -43,12 +43,13 @@ export default {
   .text-container {
     z-index: 3;
     position: absolute;
-    top: 5rem;
+    top: 0;
     margin: 0;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
+    padding: 5em 0 0 2rem;
 
     .text {
       padding: 0 16px;
