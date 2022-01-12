@@ -41,7 +41,7 @@ export default {
   }
 
   .text-container {
-    z-index: 10;
+    z-index: 3;
     position: absolute;
     top: 5rem;
     margin: 0;

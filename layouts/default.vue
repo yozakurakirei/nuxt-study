@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-navigation-drawer app v-model="drawer" clipped class="hamburger">
+    <v-navigation-drawer app v-model="drawer" class="hamburger" right temporary>
       <v-container>
         <v-list-item>
           <v-list-item-content>
@@ -12,9 +12,9 @@
         
         <v-divider></v-divider>
 
-        <v-list nav dense>
+        <v-list nav>
           <v-list-item v-for="nav_list in nav_lists" :key="nav_list.name" :to="nav_list.link">
-            <template v-slot: activator>
+            <template v-slot: activator :z-index="zIndex">
               <v-list-item-content>
                 <v-list-item-title>{{ nav_list.name }}</v-list-item-title>
               </v-list-item-content>
@@ -34,7 +34,7 @@
           <v-btn v-on="on" text>運営者情報</v-btn>
           </template>
           <v-list>
-            <v-list-item v-for="admin in admins" :key="admin" :to="admin.link">
+            <v-list-item v-for="admin in admins" :key="admin.name" :to="admin.link">
               <v-list-item-content class="drop__list">
                 <v-list-item-title class="drop__list__item">{{ admin.name }}</v-list-item-title>
               </v-list-item-content>
@@ -71,7 +71,8 @@ export default {
         {name: "SES"},
         {name: "その他企業"},
         {name: "グラフで見てみる", link: "/graph"}
-      ]
+      ],
+      zIndex: 300
     }
   }
 }
