@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
+import pkg from "./package"
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -36,9 +37,9 @@ export default {
     '@nuxtjs/vuetify',
   ],
 
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-  ],
+  // proxy: { 
+  //   "api": "http://localhost:8000", //実務では環境変数にする
+  // },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
@@ -65,5 +66,15 @@ export default {
   build: {
   },
 
-  mode: "universal"
+  mode: "universal",
+
+  // Modules: https://go.nuxtjs.dev/config-modules
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy',
+  ],
+
+  axios: { 
+    proxy: true
+  },
 }

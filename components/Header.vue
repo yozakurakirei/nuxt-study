@@ -49,7 +49,8 @@ export default {
         {name: "Sler"},
         {name: "SES"},
         {name: "その他企業"},
-        {name: "グラフで見てみる", link: "/graph"}
+        {name: "グラフで見てみる", link: "/graph"},
+        {name: "laravel", link: "/about"}
       ],
     }
   }
