@@ -47,8 +47,8 @@ export default {
       nav_lists: [
         {name: "自社サービス", lists: ["フロントエンド", "バックエンド", "インフラ", "その他"]},
         {name: "Sler"},
-        {name: "SES"},
-        {name: "その他企業"},
+        {name: "ユーザー", link: "/user"},
+        {name: "顧客", link: "/customer"},
         {name: "グラフで見てみる", link: "/graph"},
         {name: "laravel", link: "/about"}
       ],
