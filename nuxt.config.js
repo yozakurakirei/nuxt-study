@@ -37,10 +37,6 @@ export default {
     '@nuxtjs/vuetify',
   ],
 
-  // proxy: { 
-  //   "api": "http://localhost:8000", //実務では環境変数にする
-  // },
-
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
@@ -71,10 +67,19 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/proxy',
   ],
 
   axios: { 
-    proxy: true
+    prefix: "/api",
+    proxy: true,
+  },
+
+  proxy: { 
+    "/api/": {
+      target: "http://localhost:8000", //実務では環境変数にする
+      pathRewrite: {
+        "^/api/": "/api/",
+      }
+    }
   },
 }
