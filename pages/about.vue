@@ -1,27 +1,18 @@
 <template>
-  <v-row>
-    <v-col class="text-center">
-      <blockquote class="blockquote">
-        &#8220;First, solve the problem. Then, write the code.&#8221;
-        <h1>sassの動作検証</h1>
-        <footer>
-          <small>
-            <em>yozakura</em>
-          </small>
-        </footer>
-      </blockquote>
-    </v-col>
-  </v-row>
+  <div>
+    {{ data }}
+  </div>
 </template>
 
 <script>
 export default {
-  
+  async asyncData ({ app }) {
+    const data = await app.$axios.$get(`http://localhost:8000/api`)
+    return { data }
+  }
 }
 </script>
 
-<style lang="scss">
-  h1 {
-    color: red;
-  }
+<style>
+
 </style>
